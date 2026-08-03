@@ -113,6 +113,12 @@ body {
   z-index: 10;
 }
 
+.dil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+}
 .tool-btn {
   display: flex;
   flex-direction: column;
