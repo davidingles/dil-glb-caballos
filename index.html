@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visor 3D · CABALLOS.glb</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Contenedor del renderizado WebGL -->
+  <div id="scene-container"></div>
+
+  <!-- Cabecera -->
+  <header class="header">
+    <div class="logo">◈</div>
+    <div class="title-block">
+      <h1>Visor 3D</h1>
+      <span class="subtitle">CABALLOS.glb</span>
+    </div>
+    <div class="hint">
+      <span class="mouse">🖱️</span> Arrastra para girar · Rueda para zoom
+    </div>
+  </header>
+
+  <!-- Barra de control inferior -->
+  <div class="toolbar">
+    <button id="btn-rotate" class="tool-btn" title="Activar / pausar rotación automática" aria-pressed="true">
+      <span class="icon" id="icon-rotate">⏸</span>
+      <span class="label">Rotación</span>
+    </button>
+    <button id="btn-reset" class="tool-btn" title="Restablecer la vista">
+      <span class="icon">⟲</span>
+      <span class="label">Restablecer</span>
+    </button>
+    <button id="btn-fullscreen" class="tool-btn" title="Pantalla completa">
+      <span class="icon">⛶</span>
+      <span class="label">Pantalla</span>
+    </button>
+  </div>
+
+  <!-- Pantalla de carga -->
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="spinner"></div>
+      <div class="loading-track">
+        <div id="loading-bar"></div>
+      </div>
+      <p id="loading-text">Cargando modelo…</p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
